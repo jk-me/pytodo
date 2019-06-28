@@ -9,7 +9,7 @@ def index():
     todos = [
         {
             'author': {'username': 'John'},
-            'body': 'Go for a run!'
+            'body': 'Study your notes!'
         },
         {
             'author': {'username': 'Susan'},

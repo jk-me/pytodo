@@ -1,15 +1,12 @@
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - To Do List</title>
-        {% else %}
-        <title>Welcome to To Do!</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hi, {{ user.username }}!</h1>
-        {% for todo in todos %}
-        <div><p>{{ todo.author.username }} says: <b>{{ todo.body }}</b></p></div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+
+    {% for todo in todos %}
+    <div><p>
+      {{ todo.author.username }} says: <b>{{ todo.body }}</b>
+    </p></div>
+    {% endfor %}
+    
+{% endblock %}
