@@ -4,6 +4,7 @@ from app import app
 @app.route('/')
 @app.route('/index')
 
+
 def index():
     user = {'username': 'Jenny'}
     todos = [
@@ -17,3 +18,9 @@ def index():
         }
     ]
     return render_template('index.html', title='Home', user=user, todos=todos)
+
+
+@app.route('/pie')
+
+def pie():
+    return render_template('pie.html', pie='PoTato')
