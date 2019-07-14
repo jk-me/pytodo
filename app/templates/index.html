@@ -1,6 +1,19 @@
-{% extends "base.html" %}
+<!-- {% extends "base.html" %}
 
-{% block content %}
+{% block content %} -->
+
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }} - To Do List</title>
+        {% else %}
+        <title>Welcome to To Do!</title>
+        {% endif %}
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="{{ url_for('static',filename='js/btswcalc.js') }}">
+        </script>
+    </head>
+    <body>
     <h1>Hi, {{ user.username }}!</h1>
 
     {% for todo in todos %}
@@ -50,7 +63,7 @@
         </tr>
       </tbody>
     </table>
-    <button class="submitButton" type="button" name="button" id="calc" onclick="calculate()">Calculate</button>
+    <button class="submitButton" type="button" name="button" id="calc" onclick="calculate()" >Calculate</button>
     <div class="result">
       <table>
         <thead>
@@ -63,9 +76,11 @@
         <tbody>
           <tr id='lvl30'>
             <td>30</td>
+
           </tr>
         </tbody>
       </table>
     </div>
-
-{% endblock %}
+  </body>
+</html>
+<!-- {% endblock %} -->

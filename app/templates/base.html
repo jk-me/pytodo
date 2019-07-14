@@ -5,7 +5,9 @@
         {% else %}
         <title>Welcome to To Do!</title>
         {% endif %}
-        <script type="text/javascript" src="../script/btswcalc.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="{{ url_for('static',filename='js/btswcalc.js') }}">
+        </script>
     </head>
     <body>
         <!-- basic navbar link -->
