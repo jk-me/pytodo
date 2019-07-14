@@ -8,5 +8,64 @@
       {{ todo.author.username }} says: <b>{{ todo.body }}</b>
     </p></div>
     {% endfor %}
-    
+
+    <table>
+      <thead>
+        <tr>
+          <th>Card Stat Calculator</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Card Name</td>
+          <td><input type="text" id='name'></td>
+        </tr>
+        <tr>
+          <td>Stars</td>
+          <td><input type="number" id='stars'></td>
+
+        </tr>
+        <tr>
+          <td>Current Level</td>
+          <td><input type="number" id='level'></td>
+
+        </tr>
+        <tr>
+          <td>Empathy</td>
+          <td><input type="number" id='empathy'></td>
+
+        </tr>
+        <tr>
+          <td>Passion</td>
+          <td><input type="number" id='passion'></td>
+
+        </tr>
+        <tr>
+          <td>Stamina</td>
+          <td><input type="number" id='stamina'></td>
+        </tr>
+        <tr>
+          <td>Wisdom</td>
+          <td><input type="number" id='wisdom'></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="submitButton" type="button" name="button" id="calc" onclick="calculate()">Calculate</button>
+    <div class="result">
+      <table>
+        <thead>
+          <th>Level</th>
+          <th>Empathy</th>
+          <th>Passion</th>
+          <th>Stamina</th>
+          <th>Wisdom</th>
+        </thead>
+        <tbody>
+          <tr id='lvl30'>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
 {% endblock %}
